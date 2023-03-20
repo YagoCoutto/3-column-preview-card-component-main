@@ -1,0 +1,93 @@
+@use 'variables';
+@use 'mixins';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100vw;
+    height: 100vh;
+    @include mixins.flexbox;
+    align-items: center
+}
+
+main {
+    @include mixins.container;
+    @include mixins.flexbox;
+
+    section {
+        @include mixins.content;
+        @include mixins.flexbox;
+        flex-direction: column;
+
+        &.a {
+            background-color: variables.$Bright_orange;
+            height: 100%;
+            border-radius: 10px 0 0 10px;
+
+            button{
+                color: variables.$Bright_orange;
+            }
+        }
+
+        &.b {
+            background-color: variables.$Dark_cyan;
+            height: 100%;
+
+            button{
+                color: variables.$Dark_cyan;
+            }
+        }
+
+        &.c {
+            background-color: variables.$Very_dark_cyan;
+            height: 100%;
+            border-radius: 0 10px 10px 0;
+
+            button{
+                color: variables.$Very_dark_cyan;
+            }
+        }
+    }
+
+    .img {
+        align-items: start;
+        padding-bottom: 1.8rem;
+    }
+
+    .title {
+        padding-bottom: 1.6rem;
+
+        h1{
+            font-family: 'Big Shoulders Display', cursive;
+            text-transform: uppercase;
+            font-size: 2.3rem;
+            color: antiquewhite;
+        }
+    }
+
+    .paragraph {
+        padding-bottom: 5.6rem;
+        font-family: 'Lexend Deca', sans-serif;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        color: variables.$Transparent_white_paragraphs;
+    }
+
+    .btt {
+        
+        button{
+            background-color: variables.$Very_light_gray_background_headings_buttons;
+            border: none;
+            width: 7.5vw;
+            height: 5.1vh;
+            border-radius: 30px;
+            font-family: 'Lexend Deca', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+    }
+}

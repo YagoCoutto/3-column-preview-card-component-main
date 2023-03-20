@@ -1,0 +1,21 @@
+@use 'variables';
+
+@mixin flexbox{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: row;
+}
+
+@mixin container{
+    max-width:47.9vw;
+    height: 51.5vh;
+    background-color: cadetblue;
+    border-radius: 10px;
+    
+}
+
+@mixin content{
+    width: 100%;
+    padding: 3.1rem;
+}
